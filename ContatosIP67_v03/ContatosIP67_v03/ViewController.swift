@@ -14,14 +14,32 @@ class ViewController: UIViewController {
     @IBOutlet var telefone: UITextField!
     @IBOutlet var endereco: UITextField!
     @IBOutlet var siteText: UITextField!
+    var dao:ContatoDao
+    
+    required init?(coder aDecoder: NSCoder){
+        self.dao = ContatoDao.sharedInstance()
+        super.init(coder:aDecoder )
+    }
     
     @IBAction func pegaDadosDoFormulario(){
-        let nome       = self.nome.text!
-        let telefone   = self.telefone.text!
-        let endereco   = self.endereco.text!
-        let siteText   = self.siteText.text!
-        print("Nome: \(nome), Telefone: \(telefone), Endereço: \(endereco), Site: \(siteText)")
+        
+        let contato: Contato = Contato()
+        
+//        let nome       = self.nome.text!
+//        let telefone   = self.telefone.text!
+//        let endereco   = self.endereco.text!
+//        let siteText   = self.siteText.text!
+//        print("Nome: \(nome), Telefone: \(telefone), Endereço: \(endereco), Site: \(siteText)")
+        
+        contato.nome       = self.nome.text!
+        contato.telefone   = self.telefone.text!
+        contato.endereco   = self.endereco.text!
+        contato.siteText   = self.siteText.text!
+//        print(contato)
+        dao.adiciona(contato)
     }
+    
+    
     
     
     override func viewDidLoad() {
