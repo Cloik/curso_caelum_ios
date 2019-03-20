@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C39667B2241B2BC009D8D7C /* ContatosIP67_v03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67_v03.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C39667B2241B2BC009D8D7C /* FormularioContatoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormularioContatoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C39667E2241B2BC009D8D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C3966802241B2BC009D8D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C3966832241B2BC009D8D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		4C39667C2241B2BC009D8D7C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4C39667B2241B2BC009D8D7C /* ContatosIP67_v03.app */,
+				4C39667B2241B2BC009D8D7C /* FormularioContatoViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4C39667A2241B2BC009D8D7C /* ContatosIP67_v03 */ = {
+		4C39667A2241B2BC009D8D7C /* FormularioContatoViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C3966902241B2BC009D8D7C /* Build configuration list for PBXNativeTarget "ContatosIP67_v03" */;
+			buildConfigurationList = 4C3966902241B2BC009D8D7C /* Build configuration list for PBXNativeTarget "FormularioContatoViewController" */;
 			buildPhases = (
 				4C3966772241B2BC009D8D7C /* Sources */,
 				4C3966782241B2BC009D8D7C /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = ContatosIP67_v03;
+			name = FormularioContatoViewController;
 			productName = ContatosIP67_v03;
-			productReference = 4C39667B2241B2BC009D8D7C /* ContatosIP67_v03.app */;
+			productReference = 4C39667B2241B2BC009D8D7C /* FormularioContatoViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4C3966762241B2BC009D8D7C /* Build configuration list for PBXProject "ContatosIP67_v03" */;
+			buildConfigurationList = 4C3966762241B2BC009D8D7C /* Build configuration list for PBXProject "FormularioContatoViewController" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4C39667A2241B2BC009D8D7C /* ContatosIP67_v03 */,
+				4C39667A2241B2BC009D8D7C /* FormularioContatoViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -285,7 +285,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4C3966762241B2BC009D8D7C /* Build configuration list for PBXProject "ContatosIP67_v03" */ = {
+		4C3966762241B2BC009D8D7C /* Build configuration list for PBXProject "FormularioContatoViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C39668E2241B2BC009D8D7C /* Debug */,
@@ -294,7 +294,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C3966902241B2BC009D8D7C /* Build configuration list for PBXNativeTarget "ContatosIP67_v03" */ = {
+		4C3966902241B2BC009D8D7C /* Build configuration list for PBXNativeTarget "FormularioContatoViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4C3966912241B2BC009D8D7C /* Debug */,
