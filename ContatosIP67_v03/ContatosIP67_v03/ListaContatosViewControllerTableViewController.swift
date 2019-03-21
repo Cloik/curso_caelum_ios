@@ -34,6 +34,14 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func exibeFormulario(_ contato:Contato){
+        let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
+        let formulario = storyboard.instantiateViewController(withIdentifier: "Form-Contato") as! FormularioContatoViewController
+        formulario.contato = contato
+        
+        self.navigationController?.pushViewController(formulario, animated: true)
+    }
 
     // MARK: - Table view data source
 
@@ -83,6 +91,12 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
             self.dao.remove(indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let contatoSelecionado = dao.buscaContatoNaPosicao(indexPath.row)
+        self.exibeFormulario(contatoSelecionado)
+        //print("Nome: \(contatoSelecionado.nome)")
     }
     
 

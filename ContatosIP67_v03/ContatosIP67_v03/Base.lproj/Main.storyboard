@@ -60,7 +60,7 @@
         <!--Cadastro-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FormularioContatoViewController" customModule="FormularioContatoViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Form-Contato" id="BYZ-38-t0r" customClass="FormularioContatoViewController" customModule="FormularioContatoViewController" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -129,7 +129,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="xhD-z1-Lh8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dSn-Ul-qzn">
+                        <barButtonItem key="rightBarButtonItem" title="Adicionar" id="dSn-Ul-qzn">
                             <connections>
                                 <action selector="criaContato" destination="BYZ-38-t0r" id="aaH-a0-c3e"/>
                             </connections>
