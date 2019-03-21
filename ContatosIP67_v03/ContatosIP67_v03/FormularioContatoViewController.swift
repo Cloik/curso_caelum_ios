@@ -15,32 +15,30 @@ class FormularioContatoViewController: UIViewController {
     @IBOutlet var endereco: UITextField!
     @IBOutlet var siteText: UITextField!
     var dao:ContatoDao
+    var contato: Contato!
     
     required init?(coder aDecoder: NSCoder){
         self.dao = ContatoDao.sharedInstance()
         super.init(coder:aDecoder )
     }
     
-    @IBAction func pegaDadosDoFormulario(){
-        
-        let contato: Contato = Contato()
-        
-//        let nome       = self.nome.text!
-//        let telefone   = self.telefone.text!
-//        let endereco   = self.endereco.text!
-//        let siteText   = self.siteText.text!
-//        print("Nome: \(nome), Telefone: \(telefone), Endereço: \(endereco), Site: \(siteText)")
-        
-        contato.nome       = self.nome.text!
-        contato.telefone   = self.telefone.text!
-        contato.endereco   = self.endereco.text!
-        contato.siteText   = self.siteText.text!
-//        print(contato)
+    @IBAction func criaContato(){
+        self.pegaDadosDoFormulario()
         dao.adiciona(contato)
+        _ = self.navigationController?.popViewController(animated: true)
     }
     
-    
-    
+    func pegaDadosDoFormulario(){
+        
+        self.contato = Contato()
+       
+        self.contato.nome       = self.nome.text!
+        self.contato.telefone   = self.telefone.text!
+        self.contato.endereco   = self.endereco.text!
+        self.contato.siteText   = self.siteText.text!
+
+    }
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()

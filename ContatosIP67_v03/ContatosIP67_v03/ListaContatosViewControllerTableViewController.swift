@@ -9,7 +9,16 @@
 import UIKit
 
 class ListaContatosViewControllerTableViewController: UITableViewController {
-
+    
+    var dao: ContatoDao
+    static let cellIdentifier = "Cell"
+    
+    required init?(coder aDecoder: NSCoder){
+        //self.dao = ContatoDao.ContatoDaoInstance()
+        self.dao = ContatoDao.sharedInstance()
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,22 +38,33 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return dao.listaTodos().count
     }
 
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-//
-//        // Configure the cell...
-//
-//        return cell
-//    }
+   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   
+    let contato:Contato = self.dao.buscaContatoNaPosicao(indexPath.row)
+    
+    var cell:UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: ListaContatosViewControllerTableViewController.cellIdentifier)
+    
+    if (cell == nil){
+        cell = UITableViewCell(style: .default, reuseIdentifier: ListaContatosViewControllerTableViewController.cellIdentifier)
+    }
+        cell!.textLabel?.text = contato.nome
+
+        return cell!
+   }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
 //    
 //
 //    
