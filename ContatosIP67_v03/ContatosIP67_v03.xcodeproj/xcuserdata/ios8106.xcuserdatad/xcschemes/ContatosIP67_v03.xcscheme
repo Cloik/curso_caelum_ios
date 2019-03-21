@@ -17,7 +17,7 @@
                BlueprintIdentifier = "4C39667A2241B2BC009D8D7C"
                BuildableName = "FormularioContatoViewController.app"
                BlueprintName = "FormularioContatoViewController"
-               ReferencedContainer = "container:FormularioContatoViewController.xcodeproj">
+               ReferencedContainer = "container:ContatosIP67_v03.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "4C39667A2241B2BC009D8D7C"
             BuildableName = "FormularioContatoViewController.app"
             BlueprintName = "FormularioContatoViewController"
-            ReferencedContainer = "container:FormularioContatoViewController.xcodeproj">
+            ReferencedContainer = "container:ContatosIP67_v03.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "4C39667A2241B2BC009D8D7C"
             BuildableName = "FormularioContatoViewController.app"
             BlueprintName = "FormularioContatoViewController"
-            ReferencedContainer = "container:FormularioContatoViewController.xcodeproj">
+            ReferencedContainer = "container:ContatosIP67_v03.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "4C39667A2241B2BC009D8D7C"
             BuildableName = "FormularioContatoViewController.app"
             BlueprintName = "FormularioContatoViewController"
-            ReferencedContainer = "container:FormularioContatoViewController.xcodeproj">
+            ReferencedContainer = "container:ContatosIP67_v03.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

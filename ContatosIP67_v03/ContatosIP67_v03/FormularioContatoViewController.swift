@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FormularioContatoViewController: UIViewController {
 
     @IBOutlet var nome:     UITextField!
     @IBOutlet var telefone: UITextField!
