@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListaContatosViewControllerTableViewController: UITableViewController {
+class ListaContatosViewControllerTableViewController: UITableViewController, FormularioContatoViewControllerDelegate {
     
     var dao: ContatoDao
     static let cellIdentifier = "Cell"
@@ -38,6 +38,8 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
     func exibeFormulario(_ contato:Contato){
         let storyboard: UIStoryboard = UIStoryboard (name: "Main", bundle: nil)
         let formulario = storyboard.instantiateViewController(withIdentifier: "Form-Contato") as! FormularioContatoViewController
+        
+        formulario.delegate = self
         formulario.contato = contato
         
         self.navigationController?.pushViewController(formulario, animated: true)
@@ -99,6 +101,15 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
         //print("Nome: \(contatoSelecionado.nome)")
     }
     
+    func contatoAdicionado(_ contato: Contato) {
+        print("Contato adicionado: \(contato.nome)")
+    }
+    
+    func contatoAtualizado(_ contato: Contato) {
+        print("Contato atualizado: \(contato.nome)")
+    }
+    
+    
 
     /*
     // Override to support rearranging the table view.
@@ -118,11 +129,16 @@ class ListaContatosViewControllerTableViewController: UITableViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "FormSegue"{
+            
+            if let formulario = segue.destination as? FormularioContatoViewController{
+                formulario.delegate = self
+            }
+        }
     }
-    */
+ 
 
 }

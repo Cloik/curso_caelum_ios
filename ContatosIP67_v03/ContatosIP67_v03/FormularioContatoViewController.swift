@@ -16,6 +16,7 @@ class FormularioContatoViewController: UIViewController {
     @IBOutlet var siteText: UITextField!
     var dao:ContatoDao
     var contato: Contato!
+    var delegate:FormularioContatoViewControllerDelegate?
     
     required init?(coder aDecoder: NSCoder){
         self.dao = ContatoDao.sharedInstance()
@@ -25,6 +26,8 @@ class FormularioContatoViewController: UIViewController {
     @IBAction func criaContato(){
         self.pegaDadosDoFormulario()
         dao.adiciona(contato)
+        
+        self.delegate?.contatoAdicionado(contato)
         _ = self.navigationController?.popViewController(animated: true)
     }
     
@@ -45,6 +48,7 @@ class FormularioContatoViewController: UIViewController {
     func atualizaContato(){
         pegaDadosDoFormulario()
         
+        self.delegate?.contatoAdicionado(contato)
         _ = self.navigationController?.popViewController(animated: true)
     }
   

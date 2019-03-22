@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1E0E072244647600C22D27 /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */; };
 		4C312E702241CFCC00DBFC68 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */; };
 		4C39667F2241B2BC009D8D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39667E2241B2BC009D8D7C /* AppDelegate.swift */; };
 		4C3966812241B2BC009D8D7C /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3966802241B2BC009D8D7C /* FormularioContatoViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = SOURCE_ROOT; };
 		4C39667B2241B2BC009D8D7C /* FormularioContatoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormularioContatoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C39667E2241B2BC009D8D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				4C39667E2241B2BC009D8D7C /* AppDelegate.swift */,
 				4C3966802241B2BC009D8D7C /* FormularioContatoViewController.swift */,
+				4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */,
 				4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */,
 				4C3966942241C46E009D8D7C /* Contato.h */,
 				4C3966952241C46E009D8D7C /* Contato.m */,
@@ -155,6 +158,7 @@
 			files = (
 				4C3966962241C46E009D8D7C /* Contato.m in Sources */,
 				4C3966812241B2BC009D8D7C /* FormularioContatoViewController.swift in Sources */,
+				4C1E0E072244647600C22D27 /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				4C312E702241CFCC00DBFC68 /* ContatoDao.swift in Sources */,
 				4C3966872241B2BC009D8D7C /* ContatosIP67_v03.xcdatamodeld in Sources */,
 				4C39667F2241B2BC009D8D7C /* AppDelegate.swift in Sources */,
