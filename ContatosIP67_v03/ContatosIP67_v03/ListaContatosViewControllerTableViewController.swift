@@ -12,6 +12,7 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
     
     var dao: ContatoDao
     static let cellIdentifier = "Cell"
+    var linhaDestaque: IndexPath?
     
     required init?(coder aDecoder: NSCoder){
         //self.dao = ContatoDao.ContatoDaoInstance()
@@ -73,7 +74,23 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
    }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         self.tableView.reloadData()
+        
+        if let linha = self.linhaDestaque{
+            
+            self.tableView.selectRow(at: linha, animated: true, scrollPosition: .middle)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)){
+                
+                self.tableView.deselectRow(at: linha, animated: true)
+                self.linhaDestaque = Optional.none
+                
+            }
+        }
+        
+        
+        
     }
     
 //    
@@ -102,11 +119,12 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
     }
     
     func contatoAdicionado(_ contato: Contato) {
-        print("Contato adicionado: \(contato.nome)")
+        self.linhaDestaque = IndexPath(row: dao.buscaPosicaoDoContato(contato),section: 0)
+        
     }
     
     func contatoAtualizado(_ contato: Contato) {
-        print("Contato atualizado: \(contato.nome)")
+        self.linhaDestaque = IndexPath(row: dao.buscaPosicaoDoContato(contato),section: 0)
     }
     
     
