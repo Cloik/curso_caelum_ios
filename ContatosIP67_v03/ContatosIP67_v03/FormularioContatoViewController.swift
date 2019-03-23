@@ -8,12 +8,13 @@
 
 import UIKit
 
-class FormularioContatoViewController: UIViewController {
+class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet var nome:     UITextField!
     @IBOutlet var telefone: UITextField!
     @IBOutlet var endereco: UITextField!
     @IBOutlet var siteText: UITextField!
+    @IBOutlet var imageView: UIImageView!
     var dao:ContatoDao
     var contato: Contato!
     var delegate:FormularioContatoViewControllerDelegate?
@@ -65,9 +66,42 @@ class FormularioContatoViewController: UIViewController {
             let botaoAlterar = UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(atualizaContato))
             
             self.navigationItem.rightBarButtonItem = botaoAlterar
+            
+            
+        }
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(selecionarFoto(sender:)))
+        self.imageView.addGestureRecognizer(tap)
+    }
+    
+    func selecionarFoto(sender: AnyObject){
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            
+            //Camera disponível
+            
+        }else{
+            
+            //Usar biblioteca
+            let imagePicker = UIImagePickerController()
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            imagePicker.delegate = self
+            
+            self.present(imagePicker, animated: true, completion: nil)
+            
         }
     }
-
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let imageSelecionada = info[UIImagePickerControllerEditedImage] as? UIImage{
+        
+        self.imageView.image = imageSelecionada
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

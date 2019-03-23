@@ -15,25 +15,23 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
     var linhaDestaque: IndexPath?
     
     required init?(coder aDecoder: NSCoder){
-        //self.dao = ContatoDao.ContatoDaoInstance()
         self.dao = ContatoDao.sharedInstance()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(exibirMaisAcoes(gesture:)))
+
+        self.tableView.addGestureRecognizer(longPress)
         self.navigationItem.leftBarButtonItem = self.editButtonItem
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     func exibeFormulario(_ contato:Contato){
@@ -47,14 +45,13 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return dao.listaTodos().count
     }
 
@@ -157,6 +154,24 @@ class ListaContatosViewControllerTableViewController: UITableViewController, For
             }
         }
     }
+    
+    func exibirMaisAcoes(gesture: UIGestureRecognizer){
+        
+        let ponto = gesture.location(in: self.tableView)
+        
+        if let indexPath = self.tableView.indexPathForRow(at: ponto){
+                
+            let contato = self.dao.buscaContatoNaPosicao(indexPath.row)
+            
+            let acoes = GerenciadorDeAcoes(do: contato)
+            
+            acoes.exibirAcoes(em: self)
+        }
+        
+        
+    }
+    
+    
  
 
 }
