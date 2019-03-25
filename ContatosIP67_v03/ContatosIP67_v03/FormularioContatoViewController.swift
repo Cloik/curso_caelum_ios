@@ -39,6 +39,7 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
             self.contato = Contato()
         }
        
+        self.contato.foto = self.imageView.image
         self.contato.nome       = self.nome.text!
         self.contato.telefone   = self.telefone.text!
         self.contato.endereco   = self.endereco.text!
@@ -62,6 +63,10 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
             self.telefone.text = contato.telefone
             self.endereco.text = contato.endereco
             self.siteText.text = contato.siteText
+            
+            if let foto = contato.foto{
+                self.imageView.image = self.contato.foto
+            }
             
             let botaoAlterar = UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(atualizaContato))
             
@@ -106,6 +111,14 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidLayoutSubviews() {
+        
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.clipsToBounds = true
+    }
+    
+    
 
 }
 
