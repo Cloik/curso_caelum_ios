@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F027056DDE72E8E5E511E69 /* Pods_FormularioContatoViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5921DBB7E269A3C2662F93D /* Pods_FormularioContatoViewController.framework */; };
 		4C1E0E072244647600C22D27 /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */; };
 		4C312E702241CFCC00DBFC68 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */; };
 		4C39667F2241B2BC009D8D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39667E2241B2BC009D8D7C /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19EFC37EF86E9C8B164D8B91 /* Pods-FormularioContatoViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormularioContatoViewController.release.xcconfig"; path = "Target Support Files/Pods-FormularioContatoViewController/Pods-FormularioContatoViewController.release.xcconfig"; sourceTree = "<group>"; };
 		4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = SOURCE_ROOT; };
 		4C39667B2241B2BC009D8D7C /* FormularioContatoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormularioContatoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +41,8 @@
 		4C7FDC1A2245A76C005E65C1 /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
 		4CEFBCDC2249915B0084BD78 /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
 		4CEFBCDE2249AAFF0084BD78 /* Vila Mariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
+		E5921DBB7E269A3C2662F93D /* Pods_FormularioContatoViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FormularioContatoViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD78E4DF85B6D485EF99211 /* Pods-FormularioContatoViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormularioContatoViewController.debug.xcconfig"; path = "Target Support Files/Pods-FormularioContatoViewController/Pods-FormularioContatoViewController.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,17 +50,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F027056DDE72E8E5E511E69 /* Pods_FormularioContatoViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A8E6FBF276DBCF0CE5EA5F2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFD78E4DF85B6D485EF99211 /* Pods-FormularioContatoViewController.debug.xcconfig */,
+				19EFC37EF86E9C8B164D8B91 /* Pods-FormularioContatoViewController.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		1C511C752B5FCA86BE85B871 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5921DBB7E269A3C2662F93D /* Pods_FormularioContatoViewController.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C3966722241B2BC009D8D7C = {
 			isa = PBXGroup;
 			children = (
 				4C39667D2241B2BC009D8D7C /* ContatosIP67_v03 */,
 				4C39667C2241B2BC009D8D7C /* Products */,
+				1A8E6FBF276DBCF0CE5EA5F2 /* Pods */,
+				1C511C752B5FCA86BE85B871 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C3966902241B2BC009D8D7C /* Build configuration list for PBXNativeTarget "FormularioContatoViewController" */;
 			buildPhases = (
+				15E0E1742FD047B6B32968BF /* [CP] Check Pods Manifest.lock */,
 				4C3966772241B2BC009D8D7C /* Sources */,
 				4C3966782241B2BC009D8D7C /* Frameworks */,
 				4C3966792241B2BC009D8D7C /* Resources */,
+				3DA61DE7F72E4BBF2F361C56 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +185,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15E0E1742FD047B6B32968BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FormularioContatoViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DA61DE7F72E4BBF2F361C56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FormularioContatoViewController/Pods-FormularioContatoViewController-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FormularioContatoViewController/Pods-FormularioContatoViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C3966772241B2BC009D8D7C /* Sources */ = {
@@ -291,6 +365,7 @@
 		};
 		4C3966912241B2BC009D8D7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFD78E4DF85B6D485EF99211 /* Pods-FormularioContatoViewController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -306,6 +381,7 @@
 		};
 		4C3966922241B2BC009D8D7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EFC37EF86E9C8B164D8B91 /* Pods-FormularioContatoViewController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
