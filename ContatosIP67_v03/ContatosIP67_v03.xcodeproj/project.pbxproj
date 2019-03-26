@@ -38,6 +38,7 @@
 		4C4306632243012F00954BEB /* ListaContatosViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaContatosViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		4C7FDC1A2245A76C005E65C1 /* GerenciadorDeAcoes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GerenciadorDeAcoes.swift; sourceTree = "<group>"; };
 		4CEFBCDC2249915B0084BD78 /* ContatosNoMapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatosNoMapaViewController.swift; sourceTree = "<group>"; };
+		4CEFBCDE2249AAFF0084BD78 /* Vila Mariana.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 				4C3966882241B2BC009D8D7C /* Assets.xcassets */,
 				4C39668A2241B2BC009D8D7C /* LaunchScreen.storyboard */,
 				4C39668D2241B2BC009D8D7C /* Info.plist */,
+				4CEFBCDE2249AAFF0084BD78 /* Vila Mariana.gpx */,
 				4C3966852241B2BC009D8D7C /* ContatosIP67_v03.xcdatamodeld */,
 				4C3966932241C46E009D8D7C /* FormularioContatoViewController-Bridging-Header.h */,
 				4C7FDC1A2245A76C005E65C1 /* GerenciadorDeAcoes.swift */,

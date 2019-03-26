@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RUe-03-Ll6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="daO-Mt-F5m">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Contatos-->
         <scene sceneID="4Oq-bF-1CE">
             <objects>
                 <navigationController id="RUe-03-Ll6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contatos" image="lista-contatos" selectedImage="lista-contatos" id="gfR-Ui-Wd8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jZL-gg-8lg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -20,7 +21,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dU-IG-FRd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2261" y="-109"/>
+            <point key="canvasLocation" x="-2279" y="-500"/>
         </scene>
         <!--Contatos-->
         <scene sceneID="AFc-g3-7CG">
@@ -55,7 +56,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k1X-iH-AAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1482" y="-109"/>
+            <point key="canvasLocation" x="-1444" y="-501"/>
         </scene>
         <!--Cadastro-->
         <scene sceneID="tne-QT-ifu">
@@ -153,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-719.20000000000005" y="-109.29535232383809"/>
+            <point key="canvasLocation" x="-610" y="-501"/>
         </scene>
         <!--Contatos No Mapa View Controller-->
         <scene sceneID="bdb-sN-S6M">
@@ -168,16 +169,62 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="F3i-tk-KVL">
-                                <frame key="frameInset" minY="28" width="375" height="639"/>
+                                <frame key="frameInset" width="375" height="639"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0qi-HS-oac"/>
+                    <connections>
+                        <outlet property="mapa" destination="F3i-tk-KVL" id="Eot-8r-LNe"/>
+                        <outlet property="view" destination="F3i-tk-KVL" id="a2c-Mw-hK4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uBi-Zk-lq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.399999999999999" y="-109.29535232383809"/>
+            <point key="canvasLocation" x="-1352.8" y="252.32383808095955"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QJA-46-ZDc">
+            <objects>
+                <tabBarController id="daO-Mt-F5m" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="8Bs-HK-9Ad">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RUe-03-Ll6" kind="relationship" relationship="viewControllers" id="B0p-Et-1PM"/>
+                        <segue destination="4eK-Op-A54" kind="relationship" relationship="viewControllers" id="NyH-lE-fiX"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfA-Xk-d12" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3324" y="-116"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="Ahp-vb-ac4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4eK-Op-A54" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mapa" image="mapa-contatos" id="6mO-GX-u6h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ek-Pm-RBw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zwr-hb-TqA" kind="relationship" relationship="rootViewController" id="MPp-31-07F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFI-uw-qvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2292" y="252.32383808095955"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lista-contatos" width="30" height="30"/>
+        <image name="mapa-contatos" width="30" height="30"/>
+    </resources>
 </document>
