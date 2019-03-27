@@ -63,7 +63,6 @@
 				EFD78E4DF85B6D485EF99211 /* Pods-FormularioContatoViewController.debug.xcconfig */,
 				19EFC37EF86E9C8B164D8B91 /* Pods-FormularioContatoViewController.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +149,7 @@
 				TargetAttributes = {
 					4C39667A2241B2BC009D8D7C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = R7S9F4XF5Z;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -192,15 +192,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-FormularioContatoViewController-checkManifestLockResult.txt",
 			);
@@ -214,15 +210,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FormularioContatoViewController/Pods-FormularioContatoViewController-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
@@ -369,9 +361,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = R7S9F4XF5Z;
 				INFOPLIST_FILE = ContatosIP67_v03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.caelum.ContatosIP67-v03";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.clau.ContatosIP67-v03";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67_v03/FormularioContatoViewController-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -385,9 +378,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = R7S9F4XF5Z;
 				INFOPLIST_FILE = ContatosIP67_v03/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "br.com.caelum.ContatosIP67-v03";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.clau.ContatosIP67-v03";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ContatosIP67_v03/FormularioContatoViewController-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;

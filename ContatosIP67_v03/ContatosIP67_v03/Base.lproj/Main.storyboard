@@ -66,7 +66,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="TPKeyboardAvoidingScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -141,20 +141,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dbd-NE-bdm">
-                                <frame key="frameInset" minX="108" minY="361" width="136" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYn-5r-FoK">
-                                <frame key="frameInset" minX="108" minY="399" width="136" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fL-gF-YeJ">
                                 <frame key="frameInset" minX="18" minY="399" width="82" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -162,13 +148,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFt-Dd-U67">
-                                <frame key="frameInset" minX="278" minY="380" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFt-Dd-U67">
+                                <frame key="frameInset" minX="275" minY="380" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="gps"/>
+                                <connections>
+                                    <action selector="buscarCoordenadasWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LO8-5o-gfD"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gn6-YR-asQ">
+                                <frame key="frameInset" minX="108" minY="361" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3E-FT-gcj">
+                                <frame key="frameInset" minX="108" minY="399" width="159" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.81184061447500522" green="0.92936670009381539" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastro" id="xhD-z1-Lh8">
                         <barButtonItem key="rightBarButtonItem" title="Adicionar" id="dSn-Ul-qzn">
@@ -180,6 +183,8 @@
                     <connections>
                         <outlet property="endereco" destination="rPm-1y-cQr" id="jjY-V1-DgO"/>
                         <outlet property="imageView" destination="uZ9-8f-GIl" id="WMk-g6-J7V"/>
+                        <outlet property="latitude" destination="gn6-YR-asQ" id="dKi-w9-Za9"/>
+                        <outlet property="longitude" destination="s3E-FT-gcj" id="a6N-mR-LLT"/>
                         <outlet property="nome" destination="dVE-V5-o46" id="ymn-lY-suA"/>
                         <outlet property="siteText" destination="sWG-xb-ONF" id="0iD-sD-ige"/>
                         <outlet property="telefone" destination="5La-PI-I1V" id="5eh-a2-7bj"/>
@@ -257,6 +262,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gps" width="30" height="30"/>
         <image name="lista-contatos" width="30" height="30"/>
         <image name="mapa-contatos" width="30" height="30"/>
     </resources>

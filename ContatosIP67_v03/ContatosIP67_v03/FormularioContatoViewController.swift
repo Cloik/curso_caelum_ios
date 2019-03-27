@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -15,6 +16,8 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     @IBOutlet var endereco: UITextField!
     @IBOutlet var siteText: UITextField!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var latitude: UITextField!
+    @IBOutlet var longitude: UITextField!
     var dao:ContatoDao
     var contato: Contato!
     var delegate:FormularioContatoViewControllerDelegate?
@@ -32,18 +35,61 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         _ = self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func buscarCoordenadas(sender: UIButton){
+    
+        let geocoder = CLGeocoder()
+        
+        geocoder.geocodeAddressString(self.endereco.text!){ (resultado, error) in
+            
+            if error == nil && (resultado?.count)! > 0 {
+                
+                let placemark = resultado![0]
+                let coordenada = placemark.location!.coordinate
+                
+                self.latitude.text = coordenada.latitude.description
+                self.longitude.text = coordenada.longitude.description
+            }
+        }
+    }
+    
     func pegaDadosDoFormulario(){
         
         if (contato == nil){
             
             self.contato = Contato()
         }
-       
-        self.contato.foto = self.imageView.image
+        
+        //self.contato.foto = self.imageView.image
+        
+        //Para evitar a quebra do app se a imagem estiver vazia
+        if let imagem = imageView.image{
+            contato.foto = imagem
+        }
+        
         self.contato.nome       = self.nome.text!
         self.contato.telefone   = self.telefone.text!
         self.contato.endereco   = self.endereco.text!
         self.contato.siteText   = self.siteText.text!
+        
+        if contato.endereco.isEmpty{
+            
+            let alert = UIAlertController(title: self.contato.endereco, message:"Campo de preenchimento Obrigatório", preferredStyle: .alert)
+            let acao = UIAlertAction(title: "Action", style: .cancel, handler: nil)
+            
+            
+            alert.addAction(acao)
+            self.present(alert, animated: true, completion: nil)
+            
+            
+        }
+        
+        if let latitude = Double(self.latitude.text!){
+            self.contato.latitude = latitude as NSNumber
+        }
+        
+        if let longitude = Double(self.longitude.text!){
+            self.contato.longitude = longitude as NSNumber
+        }
 
     }
     
@@ -63,9 +109,11 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
             self.telefone.text = contato.telefone
             self.endereco.text = contato.endereco
             self.siteText.text = contato.siteText
+            self.latitude.text = contato.latitude?.description
+            self.longitude.text = contato.longitude?.description
             
             if let foto = contato.foto{
-                self.imageView.image = self.contato.foto
+                self.imageView.image = foto
             }
             
             let botaoAlterar = UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(atualizaContato))
