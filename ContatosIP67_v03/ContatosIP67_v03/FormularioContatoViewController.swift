@@ -56,7 +56,7 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         
         if (contato == nil){
             
-            self.contato = Contato()
+            self.contato = dao.novoContato()
         }
         
         //self.contato.foto = self.imageView.image

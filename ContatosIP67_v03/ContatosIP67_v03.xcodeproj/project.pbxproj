@@ -76,6 +76,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C1F1F1F224C5D24003A382F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */,
+				4C3966952241C46E009D8D7C /* Contato.m */,
+				4C3966942241C46E009D8D7C /* Contato.h */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4C1F1F20224C5D43003A382F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C3966822241B2BC009D8D7C /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		4C3966722241B2BC009D8D7C = {
 			isa = PBXGroup;
 			children = (
@@ -97,13 +115,11 @@
 		4C39667D2241B2BC009D8D7C /* ContatosIP67_v03 */ = {
 			isa = PBXGroup;
 			children = (
+				4C1F1F20224C5D43003A382F /* View */,
+				4C1F1F1F224C5D24003A382F /* Model */,
 				4C39667E2241B2BC009D8D7C /* AppDelegate.swift */,
 				4C3966802241B2BC009D8D7C /* FormularioContatoViewController.swift */,
 				4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */,
-				4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */,
-				4C3966942241C46E009D8D7C /* Contato.h */,
-				4C3966952241C46E009D8D7C /* Contato.m */,
-				4C3966822241B2BC009D8D7C /* Main.storyboard */,
 				4CEFBCDC2249915B0084BD78 /* ContatosNoMapaViewController.swift */,
 				4C4306632243012F00954BEB /* ListaContatosViewControllerTableViewController.swift */,
 				4C3966882241B2BC009D8D7C /* Assets.xcassets */,

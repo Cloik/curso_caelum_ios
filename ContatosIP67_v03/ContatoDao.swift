@@ -20,6 +20,7 @@ class ContatoDao: CoreDataUtil {
             print(cont)
             print("Imprime contato")
         }
+        ContatoDao.sharedInstance().saveContext()
     }
     
     static func sharedInstance()->ContatoDao{
@@ -36,6 +37,10 @@ class ContatoDao: CoreDataUtil {
         self.inserirDadosIniciais()
         
         print("Caminho do BD: \(NSHomeDirectory())")
+        
+        self.carregaContatos()
+        
+        print("Metodo Init")
     }
     
     func listaTodos() -> [Contato]{
@@ -48,6 +53,8 @@ class ContatoDao: CoreDataUtil {
     }
     
     func remove(_ posicao:Int){
+        
+        persistentContainer.viewContext.delete(contatos[posicao])
         contatos.remove(at: posicao)
     }
     
@@ -77,6 +84,31 @@ class ContatoDao: CoreDataUtil {
             
         }
     }
+    
+    func novoContato() -> Contato{
+        
+        return NSEntityDescription.insertNewObject(forEntityName: "Contato", into: self.persistentContainer.viewContext) as! Contato
+        
+        self.saveContext()
+        
+    }
+    
+    func carregaContatos(){
+        let busca = NSFetchRequest<Contato>(entityName: "Contato")
+        
+        let orderPorNome = NSSortDescriptor(key: "nome", ascending: true)
+        
+        busca.sortDescriptors = [orderPorNome]
+        
+        do{
+            self.contatos = try self.persistentContainer.viewContext.fetch(busca)
+            print("Carrega contatos")
+        }catch let error as NSError{
+            print("Fetch Falhou: \(error.localizedDescription)")
+            print("Nao carregou contatos")
+        }
+    }
+    
     
     
 
