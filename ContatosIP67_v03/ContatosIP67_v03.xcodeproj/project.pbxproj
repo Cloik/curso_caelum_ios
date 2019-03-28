@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F027056DDE72E8E5E511E69 /* Pods_FormularioContatoViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5921DBB7E269A3C2662F93D /* Pods_FormularioContatoViewController.framework */; };
 		4C1E0E072244647600C22D27 /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */; };
+		4C1F1F1E224C363D003A382F /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1F1F1D224C363D003A382F /* CoreDataUtil.swift */; };
 		4C312E702241CFCC00DBFC68 /* ContatoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */; };
 		4C39667F2241B2BC009D8D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C39667E2241B2BC009D8D7C /* AppDelegate.swift */; };
 		4C3966812241B2BC009D8D7C /* FormularioContatoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3966802241B2BC009D8D7C /* FormularioContatoViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		19EFC37EF86E9C8B164D8B91 /* Pods-FormularioContatoViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FormularioContatoViewController.release.xcconfig"; path = "Target Support Files/Pods-FormularioContatoViewController/Pods-FormularioContatoViewController.release.xcconfig"; sourceTree = "<group>"; };
 		4C1E0E062244647600C22D27 /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
+		4C1F1F1D224C363D003A382F /* CoreDataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtil.swift; sourceTree = "<group>"; };
 		4C312E6F2241CFCC00DBFC68 /* ContatoDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContatoDao.swift; sourceTree = SOURCE_ROOT; };
 		4C39667B2241B2BC009D8D7C /* FormularioContatoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormularioContatoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C39667E2241B2BC009D8D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				4C3966852241B2BC009D8D7C /* ContatosIP67_v03.xcdatamodeld */,
 				4C3966932241C46E009D8D7C /* FormularioContatoViewController-Bridging-Header.h */,
 				4C7FDC1A2245A76C005E65C1 /* GerenciadorDeAcoes.swift */,
+				4C1F1F1D224C363D003A382F /* CoreDataUtil.swift */,
 			);
 			path = ContatosIP67_v03;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				4C312E702241CFCC00DBFC68 /* ContatoDao.swift in Sources */,
 				4C3966872241B2BC009D8D7C /* ContatosIP67_v03.xcdatamodeld in Sources */,
 				4C39667F2241B2BC009D8D7C /* AppDelegate.swift in Sources */,
+				4C1F1F1E224C363D003A382F /* CoreDataUtil.swift in Sources */,
 				4C4306642243012F00954BEB /* ListaContatosViewControllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
