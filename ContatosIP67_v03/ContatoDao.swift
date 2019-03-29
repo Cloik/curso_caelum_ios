@@ -53,9 +53,9 @@ class ContatoDao: CoreDataUtil {
     }
     
     func remove(_ posicao:Int){
-        
         persistentContainer.viewContext.delete(contatos[posicao])
         contatos.remove(at: posicao)
+        ContatoDao.sharedInstance().saveContext()
     }
     
     func buscaPosicaoDoContato(_ contato:Contato) -> Int{
@@ -89,8 +89,7 @@ class ContatoDao: CoreDataUtil {
         
         return NSEntityDescription.insertNewObject(forEntityName: "Contato", into: self.persistentContainer.viewContext) as! Contato
         
-        self.saveContext()
-        
+       
     }
     
     func carregaContatos(){

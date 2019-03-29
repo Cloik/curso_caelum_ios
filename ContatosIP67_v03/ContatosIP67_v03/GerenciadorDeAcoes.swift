@@ -19,7 +19,7 @@ class GerenciadorDeAcoes: NSObject{
     
     func exibirAcoes(em controller: UIViewController){
     
-    self.controller = controller
+        self.controller = controller
         let alertView = UIAlertController(title: self.contato.nome, message:nil, preferredStyle: .actionSheet)
         
         let cancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
@@ -37,12 +37,28 @@ class GerenciadorDeAcoes: NSObject{
             self.abrirNavegador()
         }
         
+        let exibirTemperatura = UIAlertAction(title: "Visualizar Clima", style: .default){action in
+            
+            self.exibirTemperatura()
+        }
+        
         alertView.addAction(cancelar)
         alertView.addAction(ligarParaContato)
         alertView.addAction(exibirContaNoMapa)
         alertView.addAction(exibirSiteDoContato)
+        alertView.addAction(exibirTemperatura)
         
         self.controller.present(alertView, animated: true, completion: nil)
+    }
+    
+    func exibirTemperatura(){
+        
+        let temperaturaViewController = controller.storyboard?.instantiateViewController(withIdentifier: "temperaturaViewController") as! TemperaturaViewController
+        
+        temperaturaViewController.contato = self.contato
+        
+        controller.navigationController?.pushViewController(temperaturaViewController, animated: true)
+        
     }
     
     private func ligar(){

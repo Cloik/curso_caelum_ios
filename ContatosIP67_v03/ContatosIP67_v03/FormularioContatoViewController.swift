@@ -71,17 +71,17 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
         self.contato.endereco   = self.endereco.text!
         self.contato.siteText   = self.siteText.text!
         
-        if contato.endereco.isEmpty{
-            
-            let alert = UIAlertController(title: self.contato.endereco, message:"Campo de preenchimento Obrigatório", preferredStyle: .alert)
-            let acao = UIAlertAction(title: "Action", style: .cancel, handler: nil)
-            
-            
-            alert.addAction(acao)
-            self.present(alert, animated: true, completion: nil)
-            
-            
-        }
+//        if contato.endereco.isEmpty{
+//            
+//            let alert = UIAlertController(title: self.contato.endereco, message:"Campo de preenchimento Obrigatório", preferredStyle: .alert)
+//            let acao = UIAlertAction(title: "Action", style: .cancel, handler: nil)
+//            
+//            
+//            alert.addAction(acao)
+//            self.present(alert, animated: true, completion: nil)
+//            
+//            
+//        }
         
         if let latitude = Double(self.latitude.text!){
             self.contato.latitude = latitude as NSNumber
