@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class FormularioContatoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UI {
 
     @IBOutlet var nome:     UITextField!
     @IBOutlet var telefone: UITextField!
@@ -36,6 +36,8 @@ class FormularioContatoViewController: UIViewController, UINavigationControllerD
     }
     
     @IBAction func buscarCoordenadas(sender: UIButton){
+        
+        //self.loading.startAnimating()
     
         let geocoder = CLGeocoder()
         
